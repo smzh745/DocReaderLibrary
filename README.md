@@ -11,6 +11,7 @@ allprojects {
   
   
   
-  dependencies {
-	        implementation 'com.github.smzh745:DocReaderLibrary:1.0'
+  dependencies 
+  {
+  implementation 'com.github.smzh745:DocReaderLibrary:1.0'
 	}
