@@ -2,16 +2,16 @@
 
 
 
-allprojects {
-		repositories {
-			...
-			maven { url 'https://jitpack.io' }
-		}
-	}
+allprojects {<br/>
+		repositories {<br/>
+			...<br/>
+			maven { url 'https://jitpack.io' }<br/>
+		}<br/>
+	}<br/>
   
+  <br/><br/><br/>
   
-  
-  dependencies 
-  {
-  implementation 'com.github.smzh745:DocReaderLibrary:1.0'
-	}
+  dependencies <br/>
+  {<br/>
+  implementation 'com.github.smzh745:DocReaderLibrary:1.0'<br/>
+	}<br/>
