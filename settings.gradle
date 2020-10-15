@@ -1,0 +1,3 @@
+include ':docreader'
+include ':app'
+rootProject.name = "DocReaderLibrary"

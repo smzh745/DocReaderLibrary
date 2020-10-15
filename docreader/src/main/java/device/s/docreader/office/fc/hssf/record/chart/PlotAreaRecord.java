@@ -1,0 +1,58 @@
+package device.s.docreader.office.fc.hssf.record.chart;
+
+
+import device.s.docreader.office.fc.hssf.record.RecordInputStream;
+import device.s.docreader.office.fc.hssf.record.StandardRecord;
+import device.s.docreader.office.fc.util.LittleEndianOutput;
+
+
+/**
+ * preceeds and identifies a frame as belonging to the plot area.<p/>
+ * 
+ * @author Andrew C. Oliver (acoliver at apache.org)
+ */
+public final class PlotAreaRecord extends StandardRecord {
+    public final static short      sid                             = 0x1035;
+
+
+    public PlotAreaRecord()
+    {
+
+    }
+
+    /**
+     * @param in unused (since this record has no data)
+     */
+    public PlotAreaRecord(RecordInputStream in)
+    {
+
+    }
+
+    public String toString()
+    {
+        StringBuffer buffer = new StringBuffer();
+
+        buffer.append("[PLOTAREA]\n");
+
+        buffer.append("[/PLOTAREA]\n");
+        return buffer.toString();
+    }
+
+    public void serialize(LittleEndianOutput out) {
+    }
+
+    protected int getDataSize() {
+        return 0;
+    }
+
+    public short getSid()
+    {
+        return sid;
+    }
+
+    public Object clone() {
+        PlotAreaRecord rec = new PlotAreaRecord();
+    
+        return rec;
+    }
+}
