@@ -2,16 +2,12 @@
 
 
 
-allprojects {<br/>
-		repositories {<br/>
-			...<br/>
-			maven { url 'https://jitpack.io' }<br/>
-		}<br/>
-	}<br/>
-  
-  <br/><br/><br/>
-  
-  dependencies <br/>
-  {<br/>
-  implementation 'com.github.smzh745:DocReaderLibrary:1.0'<br/>
-	}<br/>
+<p> Step 1. Add the JitPack repository to your build file <br/><br>
+Add it in your root build.gradle at the end of repositories:</p>
+<pre><code>allprojects {
+		repositories {
+			...
+			maven { url 'https://jitpack.io' }
+		}
+	}
+</code></pre>
