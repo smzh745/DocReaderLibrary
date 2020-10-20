@@ -29,6 +29,7 @@ import android.widget.LinearLayout.LayoutParams;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 import device.s.docreader.R;
 import device.s.docreader.office.common.IOfficeToPicture;
@@ -293,11 +294,21 @@ public class AppActivity extends AppCompatActivity implements IMainFrame {
         //
         Intent intent = getIntent();
         dbService = new DBService(getApplicationContext());
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar().setDisplayShowHomeEnabled(true);
+//        Toolbar toolbar = findViewById(R.id.toolbar);
+//        setSupportActionBar(toolbar);
+   /*     getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);*/
         filePath = intent.getStringExtra(MainConstant.INTENT_FILED_FILE_PATH);
-        File file = new File(filePath);
-        getSupportActionBar().setTitle(file.getName());
+  /*      File file = new File(filePath);
+        toolbar.setTitle(file.getName());
+
+        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // back button pressed
+                onBackPressed();
+            }
+        });*/
         // 文件关联打开文件
         if (filePath == null) {
             this.filePath = intent.getDataString();
@@ -328,12 +339,12 @@ public class AppActivity extends AppCompatActivity implements IMainFrame {
         // initialization marked
         initMarked();
     }
-
+/*
     @Override
     public boolean onSupportNavigateUp() {
         onBackPressed();
         return true;
-    }
+    }*/
 
     /**
      * true: show message when zooming
