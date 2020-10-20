@@ -28,6 +28,8 @@ import android.widget.FrameLayout;
 import android.widget.LinearLayout.LayoutParams;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 import device.s.docreader.R;
 import device.s.docreader.office.common.IOfficeToPicture;
 import device.s.docreader.office.constant.EventConstant;
@@ -58,7 +60,7 @@ import java.io.IOException;
 import java.util.List;
 
 
-public class AppActivity extends Activity implements IMainFrame {
+public class AppActivity extends AppCompatActivity implements IMainFrame {
 
     FrameLayout frame;
 
@@ -291,8 +293,11 @@ public class AppActivity extends Activity implements IMainFrame {
         //
         Intent intent = getIntent();
         dbService = new DBService(getApplicationContext());
-
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
         filePath = intent.getStringExtra(MainConstant.INTENT_FILED_FILE_PATH);
+        File file = new File(filePath);
+        getSupportActionBar().setTitle(file.getName());
         // 文件关联打开文件
         if (filePath == null) {
             this.filePath = intent.getDataString();
@@ -322,6 +327,12 @@ public class AppActivity extends Activity implements IMainFrame {
         control.openFile(filePath);
         // initialization marked
         initMarked();
+    }
+
+    @Override
+    public boolean onSupportNavigateUp() {
+        onBackPressed();
+        return true;
     }
 
     /**

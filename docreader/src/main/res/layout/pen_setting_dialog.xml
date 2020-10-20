@@ -23,7 +23,6 @@
         android:orientation="horizontal" >
 
         <TextView
-            android:id="@+id/strokeText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -46,7 +45,6 @@
         android:orientation="horizontal" >
 
         <TextView
-            android:id="@+id/alphaView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"

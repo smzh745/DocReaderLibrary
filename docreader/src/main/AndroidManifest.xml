@@ -1,12 +1,11 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="device.s.docreader">
 
-<application
-    >
+    <application>
 
-    <activity
-        android:name=".office.officereader.AppActivity"
-        android:screenOrientation="portrait"
-        android:theme="@style/AppTheme.NoActionBar" />
-</application>
+        <activity
+            android:name=".office.officereader.AppActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+    </application>
 </manifest>

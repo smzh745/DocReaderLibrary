@@ -20,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
     public void openPath(View view) {
 
         Intent intent = new Intent(this, AppActivity.class);
-        intent.putExtra(MainConstant.INTENT_FILED_FILE_PATH, "/storage/emulated/0/test.pptx");
+        intent.putExtra(MainConstant.INTENT_FILED_FILE_PATH, "/storage/emulated/0/Gold Rates App.docx");
         startActivity(intent);
     }
 }
